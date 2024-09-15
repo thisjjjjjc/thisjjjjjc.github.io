@@ -37,5 +37,23 @@ gsap.from('.home__description', {opacity: 0, duration: 1, delay:1.8, y: 30})
 gsap.from('.home__button', {opacity: 0, duration: 1, delay:2.1, y: 30})
 gsap.from('.home__img', {opacity: 0, duration: 1, delay:1.3, y: 30})
 
+function getCursor(event) {
+    let x = event.clientX;
+    let y = event.clientY;
+    let _position = `X: ${x/window.innerWidth}<br>Y: ${y/window.innerHeight}`;
 
+
+    const image = document.getElementById('imagesequence');
+    let number = Math.round(x/window.innerWidth* 40+1);
+    image.innerHTML = `<img style = "z-index: 100;" src="assets/img/bubblee/${number}.png"> `;
+
+  
+    // const infoElement = document.getElementById('info');
+    // infoElement.innerHTML = number;
+    // infoElement.style.top = y + "px";
+    // infoElement.style.left = (x + 20) + "px";
+
+    
+
+  }
 
