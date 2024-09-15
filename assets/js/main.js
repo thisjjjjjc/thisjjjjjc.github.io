@@ -45,7 +45,7 @@ function getCursor(event) {
 
     const image = document.getElementById('imagesequence');
     let number = Math.round(x/window.innerWidth* 40+1);
-    image.innerHTML = `<img style = "z-index: 100;" src="assets/img/bubblee/${number}.png"> `;
+    image.innerHTML = `<img style = "z-index: 100;" src="assets/img/bubble/${number}.png"> `;
 
   
     // const infoElement = document.getElementById('info');
