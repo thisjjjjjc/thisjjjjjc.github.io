@@ -190,7 +190,7 @@
 
 
           <div class="column-xs-12 column-md-4">
-        <p style="padding-top: 3rem; padding-left:10rem; line-height: 1.2;font-size: 20px; font-family: 'lumasan_bold';"> Implementation</p> 
+        <p style="padding-top: 3rem; padding-left:10rem; line-height: 1.2;font-size: 20px; font-family: 'lumasan_bold';"> Prototype</p> 
     </div>
 
 <div class="column-xs-12 column-md-8">
@@ -221,36 +221,10 @@
 
              <div class="column-xs-12 column-md-4" >
  </div>
-   
-<div class="column-xs-12 column-md-8">
-        <p style=" padding-right:10rem;line-height: 1.3rem;font-size: 15px; font-family: 'lumasan_thin', serif;"> The lotus was made in Blender and exported into LensStudio; the fire and bubble were made in LensStudio using its Shader Graph Nodes. All the sound and music were composed and produced in Logic Pro X. Then, I coded with JavaScript to blend the assets together and make them interactive. During the prototype, I also encountered some challenges.
-        </p>
-
-
-      </div>
-
-
-  <div class="column-xs-12 column-md-4">
-
-       </div>
-
-      <div class="column-xs-12 column-md-8">
-
-        <p style=" padding-top: 0rem; padding-right:10rem;line-height: 1.3rem;font-size: 15px; font-family: 'lumasan_thin', serif;">  <font style="font-family: 'IBM Plex Mono', monospace; font-style: italic; font-weight: 600; font-size:14px;">Challenge 1: How to manipulate the flower blooming and shrinking real-time with finger touch</font> <br>During the prototype phase, one challenge that occurred is that Lens Studio doesn’t support granular manipulation of animations (such as animation speed, playing forward or backward, etc.) during runtime. This limitation means I cannot adjust the flower's blooming or shrinking behaviors in response to the dynamics of finger movement (whether continuous or stopped, slow or fast). In other words, if I touch the touchpad once, the whole animation will play out; for example, the lotus will fully bloom, even if my fingers leave the touchpad or stop moving after triggering the animation. What I need is control over the granular mapping between finger movement and each frame of the animation. To resolve this, I manually wrote playing and reverse-playing functions by inputting the image sequences for my animation with an API function that loads the images from the assets folder at runtime.
-        </p><br></br>
-
-                <p style=" padding-top: 0rem; padding-right:10rem;line-height: 1.3rem;font-size: 15px; font-family: 'lumasan_thin', serif;">  <font style="font-family: 'IBM Plex Mono', monospace; font-style: italic; font-weight: 600; font-size:14px;">Challenge 2: Random bubble selection and Random Fireworks selection</font> <br>My design tried to implement randomness in popping the bubble. Initially, six bubbles will show up and within these six bubbles, one of them will be marked randomly to let users pop. In the beginning of each round of the bubble-generation, I generated the order for these bubbles. Then I searched online for “how to get an array with elements in random order”, and one post showed the shuffle method. I thought it was a good idea. I have five bubbles colored as red, orange, pink, blue, green, and purple, which I assigned the numbers 1, 2, 3, 4, 5, 6. Then I define my initial array of [1,2,3,4,5,6] as the initial order of my bubble popping sequence – in this case, the red, orange, pink, blue, green, and purple will be prompted to be popped by a marked circle outside each bubble for users to pop. Then I can use the shuffle function to randomize the popping order.<br></br>
-After generating the random order of bubble popping sequence, for example, array = [2,1,5,4,3,6], I will use the select two numbers in the range of 0 to 5 as the index (for example, I got 2 and 4), and then array [2] (5, which means the purple one) and array[4] (3, which means the pink one ) will be the bubble to trigger the fireworks. The following Figure shows how these two aspects of randomness were generated.
-
-
-        </p>
-        <img style="padding-top: 3rem; padding-right:3rem;" src="assets/img/random.png">
-      </div>
-
 
 
           <div class="column-xs-12 column-md-4">
-        <p style="padding-top: 3rem; padding-left:10rem; line-height: 1.2;font-size: 20px; font-family: 'lumasan_bold';"> Reflection <br> from <br>Users </p> 
+        <p style="padding-top: 3rem; padding-left:10rem; line-height: 1.2;font-size: 20px; font-family: 'lumasan_bold';"> User Testing </p> 
     </div>
 
      <div class="column-xs-12 column-md-8">
